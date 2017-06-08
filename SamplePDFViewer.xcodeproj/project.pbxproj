@@ -83,8 +83,8 @@
 				2B95EBC81EE93C5800D587A9 /* ViewController.swift */,
 				2B95EBF31EE93EDF00D587A9 /* Sample.pdf */,
 				2B95EBCA1EE93C5800D587A9 /* Main.storyboard */,
-				2B95EBCD1EE93C5800D587A9 /* Assets.xcassets */,
 				2B95EBCF1EE93C5800D587A9 /* LaunchScreen.storyboard */,
+				2B95EBCD1EE93C5800D587A9 /* Assets.xcassets */,
 				2B95EBD21EE93C5800D587A9 /* Info.plist */,
 			);
 			path = SamplePDFViewer;
