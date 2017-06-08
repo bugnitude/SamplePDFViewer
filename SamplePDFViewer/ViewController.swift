@@ -1,25 +1,16 @@
-//
-//  ViewController.swift
-//  SamplePDFViewer
-//
-//  Created by kojima on 2017/06/08.
-//  Copyright © 2017 bugnitude. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	@IBAction func showPDF(_ sender: UIButton) {
+
+		// Show PDF View Controller
+		let fileURL = Bundle.main.url(forResource: "Sample", withExtension: "pdf")!
+		if let pdfViewController = PDFViewController(fileURL: fileURL, password: nil, hasCoverPage: true, layoutMargin: PDFLayoutMargin(margin: 5.0)) {
+			let navigationController = UINavigationController(rootViewController: pdfViewController)
+			self.present(navigationController, animated: true, completion: nil)
+		}
+
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
 }
 
