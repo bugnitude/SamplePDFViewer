@@ -6,7 +6,7 @@ class ViewController: UIViewController {
 
 		// Show PDF View Controller
 		let fileURL = Bundle.main.url(forResource: "Sample", withExtension: "pdf")!
-		if let pdfViewController = PDFViewController(fileURL: fileURL, password: nil, hasCoverPage: true, layoutMargin: PDFLayoutMargin(margin: 5.0)) {
+		if let pdfViewController = PDFViewController(fileURL: fileURL, hasCoverPage: true) {
 			let navigationController = UINavigationController(rootViewController: pdfViewController)
 			self.present(navigationController, animated: true, completion: nil)
 		}
