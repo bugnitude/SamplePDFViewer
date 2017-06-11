@@ -22,7 +22,7 @@ PDFViewController is the main class of the PDF viewer. This view controller is t
 ## PDFPageViewController, PDFPageImageView, PDFPageDrawView
 PDFPageViewController shows the content of each page of a PDF document. This view controller uses two views PDFPageImageView and PDFPageDrawView. PDFPageDrawView shows the content when not zoomed in using UIImageView, and PDFPageDrawView shows the same content when zoomed in using CATiledLayer. 
 
-CATiledLayer is well suited to show scalable content like PDF. But this class is slow to draw its content, so the content is not properly drawn when UIPageViewController's page curl transition occurs. In contrast, UIImageView is not suited to show scalable content, but it draws its content far faster than CATiledLayer. Since the new page is always displayed in a state which is not zoomed in at first, PDFPageViewController uses UIImageView to draw its content when not zoomed in.
+CATiledLayer is well suited to show scalable content like PDF. But this class is slow to draw its content, so the content is not properly drawn when UIPageViewController's page curl transition occurs. In contrast, UIImageView is not suited to show scalable content, but it draws its content far faster than CATiledLayer. Since the new page is always displayed in a state which is not zoomed in, PDFPageViewController uses UIImageView to draw its content when not zoomed in.
 
 PDFPageViewController generates the image of its content on background thread when instantiated. So by instantiating this class beforehand, the content is ready to be used when its content is displayed. This role is played by PDFDocumentController mentioned below.
 
